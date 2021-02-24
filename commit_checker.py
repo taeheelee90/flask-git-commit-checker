@@ -5,7 +5,7 @@ import requests
 def gitLastCommit(name, username, repository, final_results):
     #url & headers
     url = f"https://api.github.com/repos/{username}/{repository}"
-    request_headers={'Authorization' : 'token 3ac3f7262109cb1f81a2283f2b01d54fa102c621'}
+    request_headers={'Authorization' : 'token WRITE TOKEN HERE'}
 
     #request to json
     repo_data = requests.get(url, headers=request_headers).json()
