@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Server Programming - 2021 Spring</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    } </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <br>
+            <h1>Server Programming - Spring 2021 </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3>Final Project Repository: {{ total }} students</h3>            
+            <div><a href="/book-store">Bookstore Repository</a></div>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table" style="width: 700px">        
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"> Name  </th>
+                    <th scope="col"> Last Commit</th>
+                    <th scope="col"> Repository </th>                
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in result%} 
+                <tr>
+                    <td scope="col"> {{ i.name }}    </td>
+                    <td scope="col"> {{ i.last_commit }} </td>
+                    <td scope="col"> <a href= {{ i.url }} target="_blank">repository</a> </td>
+                </tr>
+            </tbody>
+                {% endfor %} 
+        </table>
+    </div>
+</div>
+</body>
+</html>
